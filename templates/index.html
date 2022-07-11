@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticker Microservice Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <p>Welcome to the Purchase Order Form Microservice, this application will have you input an appropriate
+        ticker symbol, assess the base price of the ticker symbol, and decide how many you would like to add to 
+        your finalized Purchase Order Form. 
+    </p>
+    <br>
+    <p>Please enter an appropriate ticker symbol, in all capitals, and press the Submit Ticker button. </p>
+    <form>
+        <label for="ticker">Ticker Symbol: </label>
+        <input type="text" id="ticker" name="ticker"><br>
+        <input type="submit" value="Submit Ticker">
+    </form>
+
+    <br>
+    <br> 
+
+    <table>
+        <tr>
+            <th>Ticker Symbol</th>
+            <th>Base Price</th>
+        </tr>
+        <tr>
+            <td>AAPL</td>
+            <td>145.36</td>
+        </tr>
+    </table>
+    <form>
+        <input type="submit" value="Add Security To Purchase Order Form">
+    </form>
+
+    <h2 style="text-align: center;">Purchase Order Form</h2>
+    <table>
+        <tr>
+            <th>Ticker</th>
+            <th>Quantity</th>
+            <th>Price($)</th>
+            <th>Delete</th>
+        </tr>
+        <tr>
+            <td>AAPL</td>
+            <td><input type="number" name="number" value="1"/></td>
+            <td>290.72</td>
+            <td><a href="delete_ticker" class="btn btn-default"">Delete</a></td>
+        </tr>
+        <tr>
+            <td>TWTR</td>
+            <td><input type="number" name="number" value="1"/></td>
+            <td>33.92</td>
+            <td><a href="delete_ticker" class="btn btn-default"">Delete</a></td>
+        </tr>
+        <tr>
+            <td>MSFT</td>
+            <td><input type="number" name="number" value="1"/></td>
+            <td>264.77</td>
+            <td><a href="delete_ticker" class="btn btn-default"">Delete</a></td>
+        </tr>
+        <tr>
+            <td><b>Total</b></td>
+            <td><b>3</b></td>
+            <td><b>589.41</b></td>
+            <td>-</td>
+        </tr>
+    </table>
+    <form>
+        <input type="submit" value="Submit Purchase Order Form">
+    </form>
+</body>
+</html>
